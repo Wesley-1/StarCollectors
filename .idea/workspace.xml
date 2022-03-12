@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82e87b49-162c-4452-b02a-24ca8e936bd0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/enchants-api">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="build ">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="storm" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Enum" />
+        <option value="Kotlin Script" />
+        <option value="package-info" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Wesley &lt;tench265@gmail.com&gt;" />
+        <option value="Zlurpy &lt;81816734+zlurpy@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Educational Edition 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1xN4Rs1SbyzsXG224v2Oj1zrs56" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/atlas-prisons/atlas-enchants/enchants-impl/libs" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.1609375" />
+    <property name="project.structure.side.proportion" value="0.513986" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\galactic-prisons\galactic-prisons\enchants\enchants-plugin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-enchants\enchants-impl\libs" />
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\libs" />
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-enchants\enchants-impl" />
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-gangs\gangs-impl" />
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-mines\mines-impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="storm.core.modules" />
+      <recent name="net.prisons.enchants.api.utils" />
+      <recent name="net.prisons.enchants.api.data" />
+      <recent name="net.prisons.enchants.api.files" />
+      <recent name="net.prisons.enchants.api.events" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="impl" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="gradle build" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.AtlasPrisons [build]">
+    <configuration name="Module" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="storm.core.Main" />
+      <module name="storm.modules-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Module2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="storm.core.Main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AtlasPrisons [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="mines-api build" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/mines-api" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Module" />
+      <item itemvalue="Application.Module2" />
+      <item itemvalue="Gradle.AtlasPrisons [build]" />
+      <item itemvalue="Maven.mines-api build" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AtlasPrisons [build]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82e87b49-162c-4452-b02a-24ca8e936bd0" name="Default Changelist" comment="" />
+      <created>1630182207275</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630182207275</updated>
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1630732582511</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630732582511</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added the mines plugin module">
+      <created>1630775420286</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630775420286</updated>
+    </task>
+    <task id="LOCAL-00003" summary="cleaned up code">
+      <created>1630775586328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630775586328</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added mines upgrade interface">
+      <created>1630775895288</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1630775895288</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Made Playermine class">
+      <created>1630809837055</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630809837055</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Setup reset event">
+      <created>1630813962095</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630813962095</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Editied MineResetEvent class">
+      <created>1630814131364</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1630814131364</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added MineUpgrade interface and added block interface, also setup luckyblock upgrade.">
+      <created>1630814585213</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1630814585213</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created the UpgradeHandler and made the registry">
+      <created>1630814790837</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1630814790837</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added minebreak event">
+      <created>1630834613642</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1630834613642</updated>
+    </task>
+    <task id="LOCAL-00011" summary="did stuff">
+      <created>1631070418050</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1631070418050</updated>
+    </task>
+    <task id="LOCAL-00012" summary="did stuff">
+      <created>1631072154690</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1631072154690</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Setup loadSchematic method and setupWorld method using world edit. Will need to edit and create a method to check for free spaces and loaded chunks.">
+      <created>1631153679752</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631153679752</updated>
+    </task>
+    <task id="LOCAL-00014" summary="setup enchant api base">
+      <created>1631154991992</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1631154991992</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added explosive file">
+      <created>1631155507022</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631155507022</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Changed some mistakes within the mines and enchants api. I also updated the explosive class.">
+      <created>1631155691320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1631155691320</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Created base enchant">
+      <created>1631155929018</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1631155929018</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fixed project">
+      <created>1631321074358</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1631321074358</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixed project">
+      <created>1631917942775</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1631917942775</updated>
+    </task>
+    <task id="LOCAL-00020" summary="revert to old project">
+      <created>1631918529984</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1631918529984</updated>
+    </task>
+    <task id="LOCAL-00021" summary="revert to old project">
+      <created>1632713372742</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1632713372742</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Fixed project build">
+      <created>1637115819116</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1637115819116</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed project build">
+      <created>1637116051123</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1637116051123</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Fixed project build">
+      <created>1637203152838</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1637203152838</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Setup the backend for loading modules into the project and multi module setup.">
+      <created>1639453089058</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1639453089058</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Created the module base and added some tests.">
+      <created>1639540007727</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1639540007727</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixed issue with StormTest.java">
+      <created>1639540080696</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1639540080696</updated>
+    </task>
+    <task id="LOCAL-00028" summary="was missing files">
+      <created>1639540228501</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1639540228501</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Changed to abstract classes and  removed annotation">
+      <created>1639622076456</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1639622076456</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Setup config manager">
+      <created>1639974934674</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1639974934674</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Moved files to test project">
+      <created>1639974982337</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1639974982337</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added the mines plugin module" />
+    <MESSAGE value="cleaned up code" />
+    <MESSAGE value="added mines upgrade interface" />
+    <MESSAGE value="Made Playermine class" />
+    <MESSAGE value="Setup reset event" />
+    <MESSAGE value="Editied MineResetEvent class" />
+    <MESSAGE value="Added MineUpgrade interface and added block interface, also setup luckyblock upgrade." />
+    <MESSAGE value="Created the UpgradeHandler and made the registry" />
+    <MESSAGE value="added minebreak event" />
+    <MESSAGE value="did stuff" />
+    <MESSAGE value="Setup loadSchematic method and setupWorld method using world edit. Will need to edit and create a method to check for free spaces and loaded chunks." />
+    <MESSAGE value="setup enchant api base" />
+    <MESSAGE value="added explosive file" />
+    <MESSAGE value="Changed some mistakes within the mines and enchants api. I also updated the explosive class." />
+    <MESSAGE value="Created base enchant" />
+    <MESSAGE value="fixed project" />
+    <MESSAGE value="revert to old project" />
+    <MESSAGE value="Fixed project build" />
+    <MESSAGE value="Setup the backend for loading modules into the project and multi module setup." />
+    <MESSAGE value="Created the module base and added some tests." />
+    <MESSAGE value="fixed issue with StormTest.java" />
+    <MESSAGE value="was missing files" />
+    <MESSAGE value="Changed to abstract classes and  removed annotation" />
+    <MESSAGE value="Setup config manager" />
+    <MESSAGE value="Moved files to test project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved files to test project" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1253" y="295" key="#Project_Structure" timestamp="1639961757656">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1253" y="295" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1639961757656" />
+    <state x="1048" y="417" width="1505" height="929" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1647047622057">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="524" y="417" width="1505" height="929" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1639786508774" />
+    <state x="1048" y="417" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1647047622057" />
+    <state x="3396" y="507" key="#com.intellij.ide.util.MemberChooser" timestamp="1647059720052">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1698" y="507" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1640839800020" />
+    <state x="3396" y="507" key="#com.intellij.ide.util.MemberChooser/0.0.5120.1400@0.0.5120.1400" timestamp="1647059720052" />
+    <state x="2589" y="574" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1647057579194">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="2589" y="574" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1647057579194" />
+    <state x="3322" y="551" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1646191457034">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1661" y="551" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1639964170191" />
+    <state x="3322" y="551" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1646191457034" />
+    <state x="745" y="197" key="CommitChangelistDialog2" timestamp="1639974981788">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="745" y="197" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1639974981788" />
+    <state x="828" y="290" width="1476" height="734" key="DiffContextDialog" timestamp="1640668224482">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="828" y="290" width="1476" height="734" key="DiffContextDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1640668224482" />
+    <state x="3624" y="588" key="FileChooserDialogImpl" timestamp="1647051157183">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1812" y="588" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1639532429230" />
+    <state x="3624" y="588" key="FileChooserDialogImpl/0.0.5120.1400@0.0.5120.1400" timestamp="1647051157183" />
+    <state width="2516" height="160" key="GridCell.Tab.0.bottom" timestamp="1647057274481">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="1226" height="234" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1639786422167" />
+    <state width="2516" height="160" key="GridCell.Tab.0.bottom/0.0.5120.1400@0.0.5120.1400" timestamp="1647057274481" />
+    <state width="2516" height="160" key="GridCell.Tab.0.center" timestamp="1647057274481">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="1226" height="234" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1639786422167" />
+    <state width="2516" height="160" key="GridCell.Tab.0.center/0.0.5120.1400@0.0.5120.1400" timestamp="1647057274481" />
+    <state width="2516" height="160" key="GridCell.Tab.0.left" timestamp="1647057274481">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="1226" height="234" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1639786422166" />
+    <state width="2516" height="160" key="GridCell.Tab.0.left/0.0.5120.1400@0.0.5120.1400" timestamp="1647057274481" />
+    <state width="2516" height="160" key="GridCell.Tab.0.right" timestamp="1647057274481">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state width="1226" height="234" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1639786422167" />
+    <state width="2516" height="160" key="GridCell.Tab.0.right/0.0.5120.1400@0.0.5120.1400" timestamp="1647057274481" />
+    <state x="1220" y="437" key="Vcs.Push.Dialog.v2" timestamp="1639961421680">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1220" y="437" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1639961421680" />
+    <state x="819" y="321" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1639455427065">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="819" y="321" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1400@0.0.2560.1400" timestamp="1639455427065" />
+    <state x="1011" y="396" key="extract.method.dialog" timestamp="1639538051732">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1011" y="396" key="extract.method.dialog/0.0.2560.1400@0.0.2560.1400" timestamp="1639538051732" />
+    <state x="1556" y="502" key="new project wizard" timestamp="1647047684343">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="778" y="502" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1639785646977" />
+    <state x="1556" y="502" key="new project wizard/0.0.5120.1400@0.0.5120.1400" timestamp="1647047684343" />
+    <state x="1157" y="437" key="refactoring.ChangeSignatureDialog" timestamp="1639974767056">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1157" y="437" key="refactoring.ChangeSignatureDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1639974767056" />
+    <state x="1928" y="316" width="1344" height="677" key="run.anything.popup" timestamp="1647050391995">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="964" y="316" width="672" height="677" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1639621263582" />
+    <state x="1928" y="316" width="1344" height="677" key="run.anything.popup/0.0.5120.1400@0.0.5120.1400" timestamp="1647050391995" />
+    <state x="2864" y="489" width="1344" height="678" key="search.everywhere.popup" timestamp="1647058260330">
+      <screen x="0" y="0" width="5120" height="1400" />
+    </state>
+    <state x="1432" y="489" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1639973791941" />
+    <state x="2864" y="489" width="1344" height="678" key="search.everywhere.popup/0.0.5120.1400@0.0.5120.1400" timestamp="1647058260330" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
