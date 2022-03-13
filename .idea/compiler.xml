@@ -8,6 +8,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
         </processorPath>
         <module name="AtlasPrisons.enchants-api.main" />
+        <module name="AtlasPrisons.v6.main" />
         <module name="AtlasPrisons.robots-impl.main" />
         <module name="AtlasPrisons.mines-api.main" />
         <module name="AtlasPrisons.gangs-impl.main" />
@@ -15,6 +16,7 @@
         <module name="AtlasPrisons.enchants-impl.main" />
         <module name="AtlasPrisons.robots-api.main" />
         <module name="AtlasPrisons.gangs-api.main" />
+        <module name="AtlasPrisons.v7.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="16">

@@ -13,6 +13,6 @@ public class SpeedEnchant implements AtlasEnchant<SpeedData> {
 
     @Override
     public SpeedData createEnchantData(ConfigurationSection section) {
-        return new SpeedData(this, "This enchant gives the player speed", AtlasEnchantCost.createCost(1, section).getCost());
+        return new SpeedData("Hi", AtlasEnchantCost.createCost(1, section).getCost(), 1);
     }
 }
