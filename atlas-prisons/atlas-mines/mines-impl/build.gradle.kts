@@ -5,8 +5,6 @@ dependencies {
     annotationProcessor(Dependencies.LOMBOK)
     compileOnly(Dependencies.SPIGOT)
     compileOnly(Dependencies.WORLDGUARDWRAPPER)
-    implementation(files("libs/AtlasUniversal.jar"))
-
     implementation(project(":mines-api"))
     implementation(project(":enchants-api"))
 }

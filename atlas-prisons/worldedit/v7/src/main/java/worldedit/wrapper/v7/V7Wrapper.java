@@ -40,7 +40,6 @@ public interface V7Wrapper {
             this.plugin = plugin;
         }
 
-
         @Override
         public void setBlocks(World world, Block block, CuboidRegion region) {
             EditSession editSession = WorldEdit.getInstance().getEditSessionFactory().getEditSession(new BukkitWorld(world), -1);

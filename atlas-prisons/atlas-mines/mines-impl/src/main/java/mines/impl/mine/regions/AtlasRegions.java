@@ -18,6 +18,7 @@ public class AtlasRegions {
     public AtlasRegions(AtlasMine mine) {
         this.instance = AtlasMines.getPlugin(AtlasMines.class);
         this.world = Bukkit.getWorld("MineWorld");
+
         this.boundingCornerOne = getConfiguredLocation("BoundingCornerOne", mine.getMineNumber() * 1000);
         this.boundingCornerTwo = getConfiguredLocation("BoundingCornerTwo", mine.getMineNumber() * 1000);
         this.mineCornerOne = getConfiguredLocation("MineCornerOne", mine.getMineNumber() * 1000);

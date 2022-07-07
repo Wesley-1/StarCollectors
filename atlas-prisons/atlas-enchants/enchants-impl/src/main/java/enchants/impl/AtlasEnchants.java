@@ -8,7 +8,6 @@ public class AtlasEnchants extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        Bukkit.getPluginManager().registerEvents(new Test(), this);
     }
 
     @Override
