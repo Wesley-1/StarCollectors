@@ -7,7 +7,9 @@ setupPrisonsModule(
             Pair("atlas-enchants", listOf("enchants-api", "enchants-impl")),
             Pair("atlas-robots", listOf("robots-api", "robots-impl")),
             Pair("atlas-gangs", listOf("gangs-api", "gangs-impl")),
-            Pair("worldedit", listOf("v6", "v7"))))
+            Pair("worldedit", listOf("v6", "v7")),
+            Pair("core", listOf("config", "module", "item", "database", "commands", "menus", "utils", "packets" +
+                    ""))))
 
 
 fun setupPrisonsModule(base: String, setup: List<Pair<String, List<String>>>) =

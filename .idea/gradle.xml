@@ -17,6 +17,14 @@
             <option value="$PROJECT_DIR$/atlas-prisons/atlas-mines/mines-impl" />
             <option value="$PROJECT_DIR$/atlas-prisons/atlas-robots/robots-api" />
             <option value="$PROJECT_DIR$/atlas-prisons/atlas-robots/robots-impl" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/commands" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/config" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/database" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/item" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/menus" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/module" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/packets" />
+            <option value="$PROJECT_DIR$/atlas-prisons/core/utils" />
             <option value="$PROJECT_DIR$/atlas-prisons/worldedit/v6" />
             <option value="$PROJECT_DIR$/atlas-prisons/worldedit/v7" />
             <option value="$PROJECT_DIR$/buildSrc" />

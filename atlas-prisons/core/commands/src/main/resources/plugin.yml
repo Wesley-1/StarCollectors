@@ -1,0 +1,6 @@
+name: Commands
+version: ${project.version}
+main: Test
+api-version: 1.17
+commands:
+  test:
