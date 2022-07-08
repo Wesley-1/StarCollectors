@@ -12,16 +12,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 import java.util.function.Consumer;
 
 public class AtlasCommand {
 
     private String commandName;
     private String permission;
+    private String description;
     private List<String> commandAlias;
-    private List<AtlasCommand> subCommands;
+    private List<AtlasSubCommand> subCommands;
     private Command command;
     private SimpleCommandMap commandMap;
+    private Consumer<CommandSender> consumerSender;
 
     public static AtlasCommand instance;
 
@@ -32,6 +35,7 @@ public class AtlasCommand {
     public AtlasCommand() {
         this.commandName = "test";
         this.permission = "test";
+        this.description = "Description";
         this.subCommands = new ArrayList<>();
         this.commandMap = new SimpleCommandMap(Bukkit.getServer());
         this.commandAlias = new ArrayList<>();
@@ -56,27 +60,42 @@ public class AtlasCommand {
         return this;
     }
 
-    public AtlasCommand createSubCommand(List<AtlasCommand> subCommands) {
-        this.subCommands = subCommands;
+    public AtlasCommand setDescription(String description) {
+        this.description = description;
         return this;
     }
 
-    public void build(JavaPlugin plugin, Consumer<CommandSender> commandConsumer) {
-        this.command = new Command(this.commandName, "", "/", this.commandAlias) {
+    public void addSubCommands(AtlasSubCommand subCommand) {
+        this.subCommands.add(subCommand);
+    }
+
+    public AtlasCommand setExecutor(Consumer<CommandSender> consumerSender) {
+        this.consumerSender = consumerSender;
+        return this;
+    }
+
+    public void build(JavaPlugin plugin) {
+        this.command = new Command(this.commandName, this.description, "/", this.commandAlias) {
             @Override
             public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-                if (args[0].equalsIgnoreCase())
-                if (sender.hasPermission(permission)) {
-                    commandConsumer.accept(sender);
+                switch (args.length) {
+                    case 0 -> {
+                        if (sender.hasPermission(permission)) {
+                            consumerSender.accept(sender);
+                        }
+                    }
+                    case 1 -> subCommands.forEach(subCommand -> {
+                        if (args[0].equalsIgnoreCase(subCommand.getCommandName())) {
+                            if (sender.hasPermission(subCommand.getPermission())) {
+                                subCommand.getConsumerSender().accept(sender, args);
+                            }
+                        }
+                    });
                 }
                 return false;
             }
         };
-        System.out.println(
-                "working:" + this.command.getName()
-        );
         commandMap.register("AtlasCommand", this.command);
         plugin.getCommand(this.commandName).register(commandMap);
-        commandMap.getCommands().forEach(command1 -> System.out.println(command1.getName()));
     }
 }

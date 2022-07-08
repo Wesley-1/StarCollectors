@@ -27,7 +27,7 @@
         <module name="AtlasPrisons.utils.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16">
+    <bytecodeTargetLevel target="11">
       <module name="mines-api" target="1.8" />
     </bytecodeTargetLevel>
   </component>
