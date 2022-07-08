@@ -16,6 +16,7 @@ public class AtlasSubCommand {
    private String permission;
    @Getter
    private String description;
+   @Getter
    private static AtlasSubCommand instance;
 
     static {

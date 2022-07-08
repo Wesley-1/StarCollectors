@@ -9,6 +9,7 @@ public class Test extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
         AtlasCommand atlasCommand = AtlasCommand.builder()
                 .setCommandName("test")
                 .setDescription("Test command")
@@ -16,6 +17,7 @@ public class Test extends JavaPlugin {
                 .setCommandAlias(Arrays.asList("test1", "test2"))
                 .setExecutor(sender -> {
                     if (sender instanceof Player player) {
+
                         player.sendMessage("Testing command!");
                     }
                 });
@@ -26,7 +28,8 @@ public class Test extends JavaPlugin {
                 .setDescription("descriptionTest")
                 .setExecutor((sender, args) -> {
                     if (sender instanceof Player player) {
-                        switch(args.length) {
+                        player.sendMessage("hi");
+                        switch (args.length) {
                             case 2 -> {
                                 String string = args[1];
                                 player.sendMessage("Arguments are working! 2 " + string);
@@ -40,7 +43,7 @@ public class Test extends JavaPlugin {
                     }
                 }).build(atlasCommand);
 
-        atlasCommand.build(this);
+        atlasCommand.build();
     }
 
     @Override

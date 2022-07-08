@@ -3,7 +3,7 @@ package menu;
 import lombok.val;
 
 public class MenuLayout {
-    private char[] layout;
+    private final char[] layout;
 
     public MenuLayout(MenuSize size) {
         int val = size.getSize(size);

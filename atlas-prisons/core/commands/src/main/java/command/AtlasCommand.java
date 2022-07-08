@@ -1,15 +1,14 @@
 package command;
 
+import lombok.Getter;
 import org.apache.commons.lang.builder.StandardToStringStyle;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
-import org.bukkit.command.CommandSender;
-import org.bukkit.command.SimpleCommandMap;
+import org.bukkit.command.*;
 import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -17,14 +16,14 @@ import java.util.function.Consumer;
 
 public class AtlasCommand {
 
-    private String commandName;
-    private String permission;
-    private String description;
+    @Getter private String commandName;
+    @Getter private String permission;
+    @Getter private String description;
     private List<String> commandAlias;
     private List<AtlasSubCommand> subCommands;
     private Command command;
-    private SimpleCommandMap commandMap;
     private Consumer<CommandSender> consumerSender;
+    @Getter private CommandMap commandMap;
 
     public static AtlasCommand instance;
 
@@ -37,8 +36,16 @@ public class AtlasCommand {
         this.permission = "test";
         this.description = "Description";
         this.subCommands = new ArrayList<>();
-        this.commandMap = new SimpleCommandMap(Bukkit.getServer());
         this.commandAlias = new ArrayList<>();
+
+        try {
+            final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
+
+            bukkitCommandMap.setAccessible(true);
+            this.commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static AtlasCommand builder() {
@@ -74,7 +81,7 @@ public class AtlasCommand {
         return this;
     }
 
-    public void build(JavaPlugin plugin) {
+    public void build() {
         this.command = new Command(this.commandName, this.description, "/", this.commandAlias) {
             @Override
             public boolean execute(CommandSender sender, String commandLabel, String[] args) {
@@ -84,7 +91,7 @@ public class AtlasCommand {
                             consumerSender.accept(sender);
                         }
                     }
-                    case 1 -> subCommands.forEach(subCommand -> {
+                    default -> subCommands.forEach(subCommand -> {
                         if (args[0].equalsIgnoreCase(subCommand.getCommandName())) {
                             if (sender.hasPermission(subCommand.getPermission())) {
                                 subCommand.getConsumerSender().accept(sender, args);
@@ -95,7 +102,6 @@ public class AtlasCommand {
                 return false;
             }
         };
-        commandMap.register("AtlasCommand", this.command);
-        plugin.getCommand(this.commandName).register(commandMap);
+        commandMap.register("AtlasCommand",command);
     }
 }

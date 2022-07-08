@@ -5,5 +5,4 @@ dependencies {
     compileOnly(Dependencies.SPIGOT)
     annotationProcessor(Dependencies.LOMBOK)
     compileOnly(Dependencies.REFLECTIONS)
-
 }

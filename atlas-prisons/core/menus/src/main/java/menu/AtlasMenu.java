@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 
 public record AtlasMenu(String menuName, MenuLayout layout, Inventory inventory) {
 
-    private static HashMap<String, Consumer<InventoryClickEvent>> clickEvents = new HashMap<>();
+    private static final HashMap<String, Consumer<InventoryClickEvent>> clickEvents = new HashMap<>();
 
     private void setItem(ItemStack item, int slot) {
         inventory.setItem(slot, item);
