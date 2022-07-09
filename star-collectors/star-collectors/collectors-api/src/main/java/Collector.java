@@ -1,10 +1,19 @@
+import lombok.Getter;
 import me.lucko.helper.hologram.Hologram;
 import me.lucko.helper.item.ItemStackBuilder;
+import me.lucko.helper.menu.Gui;
+import me.lucko.helper.menu.scheme.MenuPopulator;
+import me.lucko.helper.menu.scheme.MenuScheme;
 import me.lucko.helper.serialize.Position;
+import me.lucko.helper.text3.Text;
+import org.bukkit.Bukkit;
+import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -13,6 +22,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.math.BigDecimal;
 import java.util.*;
 
 /**
@@ -20,7 +30,7 @@ import java.util.*;
  *             <p>
  *             This record allows us to easily create a new collector.
  */
-public record Collector(UUID name) {
+public record Collector(UUID name, CollectorType collectorType, CollectorManager.CollectorInventory inventory) {
 
     /**
      * @param location The location the collector is being registered at.
@@ -40,7 +50,7 @@ public record Collector(UUID name) {
         return ItemStackBuilder
                 .of(Material.BEACON)
                 .amount(1)
-                .name("Collector")
+                .name("Collector: " + collectorType.name)
                 .lore("Test", "Test")
                 .breakable(false)
                 .hideAttributes()
@@ -48,21 +58,40 @@ public record Collector(UUID name) {
                 .build();
     }
 
+    enum CollectorType {
+        LIMITED_MULTI_ITEM("Limited_Multi"),
+        LIMITED_SINGLE_ITEM("Limited_Single"),
+        INFINITE_MULTI_ITEM("Inf_Multi"),
+        INFINITE_SINGLE_ITEM("Inf_Single");
+
+        private final String name;
+        CollectorType(String name) {
+            this.name = name;
+        }
+        public String getName() {
+            return name;
+        }
+    }
+
     /**
      * This is the instance class, when making a collector you must make an instance of it.
      */
-    private class Instance {
-        private Player owner;
+    public class Instance {
+        @Getter private Player owner;
         private JavaPlugin main;
-        private Location bukkitLocation;
+        @Getter private Location bukkitLocation;
         private CollectorDataService service;
         private List<CollectorManager.CollectorUpgrade> upgrades;
-        private final Collector collector;
-        private Hologram collectorHologram;
+        @Getter private final Collector collector;
+        @Getter private Hologram collectorHologram;
+        @Getter private Chunk chunk;
+        private final LinkedHashMap<CollectorManager.CollectorUpgrade, Integer> upgradeLevels;
 
         public Instance(Collector collector) {
             this.collector = collector;
+            this.owner = Bukkit.getPlayer(collector.name);
             this.main = CollectorsAPI.get();
+            this.upgradeLevels = new LinkedHashMap<>();
             this.service = new CollectorDataService(main.getDataFolder().getPath());
         }
 
@@ -76,6 +105,7 @@ public record Collector(UUID name) {
 
         /**
          * @param o The object which we will be turning into bytes.
+         *
          * @return returns the byte array for the object.
          */
         public byte[] toBytes(Object o) {
@@ -90,14 +120,35 @@ public record Collector(UUID name) {
             }
         }
 
-        public void createMenu() {
+        /**
+         *
+         * @param chunk This allows us to set the chunk the collector is in.
+         *
+         * @return returns the {@link Collector.Instance} class.
+         *
+         * Builder Pattern.
+         */
+        public Instance setChunk(Chunk chunk) {
+            this.chunk = chunk;
+            return this;
+        }
 
+        /**
+         * Resets the chunk the object was in.
+         *
+         * @return returns the {@link Collector.Instance} c;ass/
+         *
+         * Builder Pattern.
+         */
+        public Instance removeChunk() {
+            this.chunk = null;
+            return this;
         }
 
         /**
          * @param bukkitLocation The location that the collector will be at.
          * @return returns the {@link Collector.Instance} class.
-         * <p>
+         *
          * Builder pattern.
          */
         public Instance setLocation(Location bukkitLocation) {
@@ -125,6 +176,18 @@ public record Collector(UUID name) {
         }
 
         /**
+         *
+         * @param event {@link EntityDeathEvent} class.
+         *
+         */
+        public void handleEntityDeath(EntityDeathEvent event) {
+            if (collector == null) return;
+            if (collector.inventory.isFull()) return;
+            collector.inventory.handleAddingItems(event.getDrops());
+            event.getDrops().clear();
+        }
+
+        /**
          * @param upgrades The array of upgrades that the collector will have.
          * @return returns the {@link Collector.Instance} class.
          * <p>
@@ -132,17 +195,10 @@ public record Collector(UUID name) {
          */
         public Instance registerUpgrades(CollectorManager.CollectorUpgrade... upgrades) {
             this.upgrades.addAll(Arrays.asList(upgrades));
-            return this;
-        }
+            this.upgrades.forEach($ -> {
+                this.upgradeLevels.put($, 1);
+            });
 
-        /**
-         * @param owner The owner of the collector.
-         * @return returns the {@link Collector.Instance} class.
-         * <p>
-         * Builder pattern.
-         */
-        public Instance setOwner(Player owner) {
-            this.owner = owner;
             return this;
         }
 
@@ -164,7 +220,7 @@ public record Collector(UUID name) {
     /**
      * This is a class which will allow us to handle all things related to a collector.
      */
-    private class CollectorManager {
+    class CollectorManager {
         private final Instance instance;
 
         public CollectorManager(Instance instance) {
@@ -174,23 +230,25 @@ public record Collector(UUID name) {
         /**
          * Removes the {@link Collector} and un-registers it.
          */
-        public void handleRemove(PlayerInteractEvent event) {
-            if (event.getClickedBlock() == null || event.getClickedBlock().getType() == Material.AIR) return;
-            if (!event.getClickedBlock().getLocation().equals(instance.bukkitLocation)) return;
+        public void handleRemove(InventoryClickEvent event) {
+            if (instance.chunk == null) return;
             if (!instance.service.contains(instance.toBytes(instance.bukkitLocation))) return;
-            if (!instance.isOwner(event.getPlayer())) return;
+            if (!(event.getWhoClicked() instanceof Player player)) return;
+            if (!instance.isOwner(player)) return;
 
             instance.service.delete(instance.toBytes(instance.bukkitLocation));
 
             instance.removeHologram();
+            instance.removeChunk();
 
-            event.getPlayer().sendMessage("Object Removed!");
+            player.sendMessage("Object Removed!");
         }
 
         /**
          * Creates the {@link Collector} and registers it.
          */
         public void handleCreate(BlockPlaceEvent event) {
+            if (instance.chunk != null) return;
             if (CollectorItemData.get(instance.main).read(event.getItemInHand()) == null) return;
             if (instance.service.contains(instance.toBytes(event.getBlock().getLocation()))) return;
 
@@ -199,6 +257,7 @@ public record Collector(UUID name) {
                     instance.toBytes(instance.collector));
 
             instance.createHologram();
+            instance.setChunk(event.getBlock().getChunk());
 
             event.getPlayer().sendMessage("Object placed!");
         }
@@ -207,14 +266,140 @@ public record Collector(UUID name) {
         /**
          * Opens the {@link Collector} menu.
          */
-        public void handleOpen(PlayerInteractEvent event) {
+        public void handleOpen(PlayerInteractEvent event, Gui gui) {
             if (event.getClickedBlock() == null || event.getClickedBlock().getType() == Material.AIR) return;
             if (!instance.service.contains(instance.toBytes(event.getClickedBlock().getLocation()))) return;
             if (!instance.isOwner(event.getPlayer())) return;
 
-            event.getPlayer().sendMessage("Helps!");
+            gui.open();
+
+            event.getPlayer().sendMessage("Works!");
         }
 
+        /**
+         * This is a class, that is used when building the {@link Collector.Instance}
+         *
+         * How we will be handling all storing of the collectors inventory.
+         */
+        public static class CollectorInventory {
+            private final int size;
+            private final List<ItemStack> itemsToCollect;
+            private final int differentItemsAllowed;
+            private final HashMap<ItemStack, Integer> storedItems;
+            private double totalMoneyAmount;
+
+            public CollectorInventory(int size, int differentItemsAllowed, List<ItemStack> items) {
+                if ((items.size() + 1) > differentItemsAllowed)
+                    throw new CollectorCreationException("Error creating collector: Item Types");
+                this.totalMoneyAmount = 0;
+                this.differentItemsAllowed = differentItemsAllowed;
+                this.itemsToCollect = items;
+                storedItems = new HashMap<>();
+                this.size = size;
+            }
+
+            /**
+             *
+             * @param differentItemsAllowed These are for the different items in the collector.
+             * @param items These are the items that will be going into the collector.
+             *
+             */
+            public CollectorInventory(int differentItemsAllowed, List<ItemStack> items) {
+                if ((items.size() + 1) > differentItemsAllowed)
+                    throw new CollectorCreationException("Error creating collector: Item Types");
+                this.totalMoneyAmount = 0;
+                this.differentItemsAllowed = differentItemsAllowed;
+                this.itemsToCollect = items;
+                storedItems = new HashMap<>();
+                this.size = 0;
+            }
+
+            /**
+             *
+             * @param itemStack The itemstack we are trying to obtain.
+             *
+             * @return returns the itemstack of the {@link Collector} item.
+             *
+             */
+            public ItemStack getInventoryItem(ItemStack itemStack) {
+                return ItemStackBuilder.of(itemStack.getType())
+                        .lore(storedItems.get(itemStack).toString())
+                        .name("This is a drop item.")
+                        .build();
+            }
+
+            public boolean isFull() {
+                return (this.storedItems.size() + 1) >= this.size && this.size != 0;
+            }
+            /**
+             *
+             * @param items The items you would like to add.
+             *
+             * Handles the adding of items to the {@link Collector} storage.
+             *
+             */
+            public void handleAddingItems(List<ItemStack> items) {
+                items.forEach($ -> {
+                    if (!itemsToCollect.contains($)) return;
+                    if ((storedItems.size() + 1) >= this.size && this.size != 0) return;
+
+                    if (!storedItems.containsKey($))
+                        storedItems.put($, 1);
+                    else storedItems.replace($, storedItems.get($) + 1);
+
+                });
+
+            }
+
+            /**
+             *
+             * @param section The configuration section for the material prices.
+             *
+             * @return returns the total amount in the collector.
+             *
+             */
+            public double getTotalMoneyAmount(ConfigurationSection section) {
+                this.totalMoneyAmount = 0;
+                storedItems.forEach(((itemStack, integer) -> {
+                    if (itemStack.getType().equals(ItemPricing.get(section).getMaterial())) {
+                        this.totalMoneyAmount += (integer * ItemPricing.get(section).getAmount());
+                    }
+                }));
+                return this.totalMoneyAmount;
+            }
+
+            /**
+             * Clears the collectors items.
+             */
+            public void handleRemovingItems() {
+                storedItems.forEach((itemStack, integer) -> storedItems.remove(itemStack));
+            }
+
+            public static class ItemPricing {
+                @Getter private double amount;
+                @Getter private Material material;
+                public static ItemPricing instance;
+                public static ItemPricing get(ConfigurationSection section) {
+                    if (ItemPricing.instance == null) {
+                        ItemPricing.instance = new ItemPricing(section);
+                    }
+                    return ItemPricing.instance;
+                }
+
+                public ItemPricing(ConfigurationSection section) {
+                    for (String string : section.getKeys(false)) {
+                        this.material = Material.getMaterial(string);
+                        this.amount = section.getDouble(string + ".price");
+                        /**
+                         * EXAMPLE:
+                         *
+                         * ACACIA_BOAT
+                         *     - 100.0
+                         */
+                    }
+                }
+            }
+        }
         /**
          * This is the {@link CollectorUpgrade} interface.
          * <p>
@@ -235,12 +420,50 @@ public record Collector(UUID name) {
             /**
              * @return returns the price of the {@link CollectorUpgrade}
              */
-            double getPrice();
+            double getPrice(int level);
+
+            /**
+             *
+             * @param instance {@link Instance} instance class.
+             *
+             * @return returns the current level of the upgrade.
+             */
+            default int getCurrentLevel(Instance instance) {
+
+                if (instance.upgrades.contains(this)) {
+                    return instance.upgradeLevels.get(this);
+                }
+
+                return 0;
+            }
+
+            /**
+             *
+             * @param instance {@link Instance} instance class.
+             *
+             * Gets the current level of the upgrade and adds {X} levels to it.
+             */
+            default void upgrade(Instance instance) {
+                if (instance.upgrades.contains(this)) {
+
+                    if (instance.upgradeLevels.get(this) == null) return;
+                    if (instance.upgradeLevels.get(this) <= getMaxLevels()) return;
+
+                    instance.upgradeLevels.replace(this, instance.upgradeLevels.get(this) + 1);
+                }
+            }
 
             /**
              * @param event This is what will happen in the menu when the upgrade is purchased.
              */
-            void handlePurchase(InventoryClickEvent event);
+            void handlePurchase(InventoryClickEvent event, Instance instance);
+
+            /**
+             *
+             * @param instance {@link Instance} instance class.
+             *
+             */
+            void run(Instance instance);
         }
     }
 }
