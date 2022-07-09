@@ -1,6 +1,6 @@
 // Contains all version information for out dependencies.
 object Versions {
-    const val SPIGOT_VERSION = "1.12.2-R0.1-SNAPSHOT"
+    const val SPIGOT_VERSION = "1.17-R0.1-SNAPSHOT"
     const val LOMBOK_VERSION = "1.18.20"
     const val REFLECTIONS_VERSION = "0.10.2";
     const val WORLDGUARDWRAPPER = "1.2.0-SNAPSHOT"
@@ -10,6 +10,7 @@ object Versions {
     const val  LUCKO_REDIS_VERSION = "1.2.0"
     const val LUCKO_LILLY_PAD_VERSION = "2.2.0"
     const val LUCKO_PROFILES_VERSION = "1.2.0"
+    const val ROCKS_DB_VERSION = "6.6.4"
 }
 
 object Dependencies {
@@ -23,5 +24,6 @@ object Dependencies {
     const val LUCKO_MONGO = "me.lucko:helper-mongo:${Versions.LUCKO_MONGO_VERSION}"
     const val LUCKO_LILLYPAD = "me.lucko:helper-lilypad:${Versions.LUCKO_LILLY_PAD_VERSION}"
     const val LUCKO_PROFILES = "me.lucko:helper-profiles:${Versions.LUCKO_PROFILES_VERSION}"
+    const val ROCKS_DB = "org.rocksdb:rocksdbjni:${Versions.ROCKS_DB_VERSION}"
 
 }

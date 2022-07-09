@@ -6,9 +6,18 @@ import org.reflections.util.ConfigurationBuilder;
 public class CollectorsAPI {
 
     private Reflections reflections;
+    private static JavaPlugin plugin;
 
-    public CollectorsAPI() {
-
+    /**
+     *
+     * @return returns the main class.
+     *
+     */
+    public static JavaPlugin get() {
+        if (plugin == null) {
+            throw new CollectorCreationException("CollectorsAPI not binded.");
+        }
+        return plugin;
     }
 
     /**
@@ -18,8 +27,11 @@ public class CollectorsAPI {
      * @return returns the {@link CollectorsAPI} class.
      */
     public CollectorsAPI bind(Class<? extends JavaPlugin> clazz) {
-        this.reflections = new Reflections(
-                new ConfigurationBuilder().addUrls(ClasspathHelper.forPackage(clazz.getName())));
+
+        this.reflections = new Reflections(new ConfigurationBuilder()
+                .addUrls(ClasspathHelper.forPackage(clazz.getName())));
+        this.plugin = JavaPlugin.getProvidingPlugin(clazz);
+
         return this;
     }
 }
