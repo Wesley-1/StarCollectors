@@ -1,4 +1,0 @@
-name: Commands
-version: ${project.version}
-main: Test
-commands:

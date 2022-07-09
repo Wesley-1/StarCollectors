@@ -1,18 +1,12 @@
-rootProject.name = "AtlasPrisons"
+rootProject.name = "StarCollectors"
 
-setupPrisonsModule(
-            "atlas-prisons",
+setupModule(
+            "star-collectors",
         listOf(
-            Pair("atlas-mines", listOf("mines-api", "mines-impl")),
-            Pair("atlas-enchants", listOf("enchants-api", "enchants-impl")),
-            Pair("atlas-robots", listOf("robots-api", "robots-impl")),
-            Pair("atlas-gangs", listOf("gangs-api", "gangs-impl")),
-            Pair("worldedit", listOf("v6", "v7")),
-            Pair("core", listOf("config", "module", "item", "database", "commands", "menus", "utils", "packets" +
-                    ""))))
+            Pair("star-collectors", listOf("collectors-api", "collectors-impl"))))
 
 
-fun setupPrisonsModule(base: String, setup: List<Pair<String, List<String>>>) =
+fun setupModule(base: String, setup: List<Pair<String, List<String>>>) =
     setup.forEach { pair
         -> pair.second.forEach { name
             -> setupSubproject(name, file("$base/${pair.first}/$name"))
