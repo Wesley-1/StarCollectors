@@ -23,32 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e87b49-162c-4452-b02a-24ca8e936bd0" name="Default Changelist" comment="Setup the collectors data service, worked with the class binding, began working on the CollectorManager and handling.">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/star-collectors/star-collectors/collectors-api/StarCollectors.collectors-api.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/star-collectors/star-collectors/collectors-impl/StarCollectors.collectors-impl.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/serializer/DiscUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/serializer/Persist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/typeadapter/ColorTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/typeadapter/EnumTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/typeadapter/ItemStackTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/typeadapter/LocationTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/enums/CollectorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/interfaces/CollectorUpgrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/managers/CollectorManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/CollectorInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/Instance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/ItemPricing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/records/Collector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/services/DataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/utility/CollectorTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/utility/InventoryUtility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/commmands/CollectorCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/events/CollectorEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/menus/CollectorMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/resources/config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/resources/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/star-collectors/star-collectors/collectors-api/star-collectors.StarCollectors.collectors-api.main~1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/star-collectors/star-collectors/collectors-impl/star-collectors.StarCollectors.collectors-impl.main~1.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/buildSrcjar-classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/buildSrcjar-classes.txt" afterDir="false" />
@@ -57,43 +37,25 @@
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.keystream" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-attributes.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/constants.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/libs/buildSrc.jar" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/libs/buildSrc.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/pluginUnderTestMetadata/plugin-under-test-metadata.properties" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/pluginUnderTestMetadata/plugin-under-test-metadata.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildSrc/build/source-roots/buildSrc/source-roots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/build/source-roots/buildSrc/source-roots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/Collector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/CollectorCreationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/exceptions/CollectorCreationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/CollectorDataService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/CollectorItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/items/CollectorItemData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/CollectorsAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/CollectorsAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/PersistentItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/items/PersistentItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/serializer/Persist.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/data/serializer/Persist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/interfaces/CollectorUpgrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/interfaces/CollectorUpgrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/items/CollectorItemData.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/items/CollectorItemData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/managers/CollectorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/managers/CollectorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/CollectorInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/CollectorInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/Instance.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/models/Instance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/records/Collector.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/records/Collector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/services/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/services/DataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/utility/CollectorTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-api/src/main/java/collectors/utility/CollectorTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/CollectorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/CollectorMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/commmands/CollectorCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/commmands/CollectorCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/events/CollectorEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/events/CollectorEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/menus/CollectorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/star-collectors/star-collectors/collectors-impl/src/main/java/menus/CollectorMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,12 +87,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="StarCollectors" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -186,16 +143,17 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.1609375" />
-    <property name="project.structure.side.proportion" value="0.513986" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/Wesley/Desktop/TestServer/server.jar",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-enchants\enchants-api" />
-      <recent name="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\galactic-prisons\galactic-prisons\enchants\enchants-plugin" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Wesley\IdeaProjects\AtlasPrisons\atlas-prisons\atlas-enchants\enchants-api\src\main\java" />
@@ -204,15 +162,16 @@
       <recent name="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\AtlasPrisons\atlas-prisons\core\utils" />
       <recent name="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\AtlasPrisons\atlas-prisons\core\module" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Wesle\Desktop\AtlasDevelopment\AtlasPrisons\atlas-prisons\atlas-enchants\enchants-api" />
+      <recent name="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\galactic-prisons\galactic-prisons\enchants\enchants-plugin" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="mines.impl.mine.data" />
       <recent name="worldedit.wrapper.v7" />
       <recent name="storm.core.modules" />
       <recent name="net.prisons.enchants.api.utils" />
       <recent name="net.prisons.enchants.api.data" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="impl" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -253,7 +212,9 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="CommandsBuild" type="GradleRunConfiguration" factoryName="Gradle">
@@ -272,7 +233,9 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="StarCollectors" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -291,27 +254,22 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="MinecraftServer" type="JarApplication">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/../../../../../Minecraft/LocalServer/server.jar" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/../../TestServer/server.jar" />
       <option name="VM_PARAMETERS" value="-Xmx3g" />
       <option name="PROGRAM_PARAMETERS" value="nogui" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\Wesle\Desktop\Wesley\Java\Minecraft\Projects\AtlasPrisons\Server" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Wesley\Desktop\TestServer" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-16" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/corretto-16.0.2" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="AtlasPrisons" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -319,33 +277,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="AtlasPrisons" />
       <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -353,33 +284,6 @@
     <configuration name="build.gradle.kts" type="KotlinStandaloneScriptRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="AtlasPrisons" />
       <option name="filePath" value="$PROJECT_DIR$/atlas-prisons/atlas-enchants/enchants-api/build.gradle.kts" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" value="$PROJECT_DIR$/atlas-prisons/atlas-enchants/enchants-api/build.gradle.kts" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -417,7 +321,7 @@
       <item itemvalue="Gradle.StarCollectors" />
       <item itemvalue="Gradle.AtlasPrisons [check]" />
       <item itemvalue="JAR Application.MinecraftServer" />
-      <item itemvalue="Application.build.gradle.kts" />
+      <item itemvalue="Kotlin script.build.gradle.kts" />
       <item itemvalue="Maven.mines-api build" />
     </list>
     <recent_temporary>
@@ -438,7 +342,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1630182207275</updated>
-      <workItem from="1657338098352" duration="17352000" />
+      <workItem from="1657338098352" duration="34564000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1630732582511</created>
@@ -699,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657382879023</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Worked more on the API (ALMOST FINISHED) also worked on some test impl.">
+      <created>1657397564993</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1657397564993</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -715,11 +626,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Setup reset event" />
     <MESSAGE value="Editied MineResetEvent class" />
     <MESSAGE value="Added MineUpgrade interface and added block interface, also setup luckyblock upgrade." />
     <MESSAGE value="Created the UpgradeHandler and made the registry" />
@@ -744,53 +653,8 @@
     <MESSAGE value="worked on enchants" />
     <MESSAGE value="Setup some of the API for collectors" />
     <MESSAGE value="Setup the collectors data service, worked with the class binding, began working on the CollectorManager and handling." />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup the collectors data service, worked with the class binding, began working on the CollectorManager and handling." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="3630" y="403" key="#com.intellij.ide.util.MemberChooser" timestamp="1657418541092">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3630" y="403" key="#com.intellij.ide.util.MemberChooser/0.0.5120.1400@0.0.5120.1400" timestamp="1657418541092" />
-    <state x="3394" y="555" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1657408842563">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3394" y="555" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.5120.1400@0.0.5120.1400" timestamp="1657408842563" />
-    <state x="3283" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1657408076520">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3283" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1657408076520" />
-    <state x="3555" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1657418002904">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3555" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.5120.1400@0.0.5120.1400" timestamp="1657418002904" />
-    <state width="2517" height="382" key="GridCell.Tab.0.bottom" timestamp="1657421765205">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state width="2517" height="382" key="GridCell.Tab.0.bottom/0.0.5120.1400@0.0.5120.1400" timestamp="1657421765205" />
-    <state width="2517" height="382" key="GridCell.Tab.0.center" timestamp="1657421765205">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state width="2517" height="382" key="GridCell.Tab.0.center/0.0.5120.1400@0.0.5120.1400" timestamp="1657421765205" />
-    <state width="2517" height="382" key="GridCell.Tab.0.left" timestamp="1657421765205">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state width="2517" height="382" key="GridCell.Tab.0.left/0.0.5120.1400@0.0.5120.1400" timestamp="1657421765205" />
-    <state width="2517" height="382" key="GridCell.Tab.0.right" timestamp="1657421765205">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state width="2517" height="382" key="GridCell.Tab.0.right/0.0.5120.1400@0.0.5120.1400" timestamp="1657421765205" />
-    <state x="3305" y="274" key="SettingsEditor" timestamp="1657422381412">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3305" y="274" key="SettingsEditor/0.0.5120.1400@0.0.5120.1400" timestamp="1657422381412" />
-    <state x="3495" y="218" width="661" height="963" key="find.popup" timestamp="1657408295308">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3495" y="218" width="661" height="963" key="find.popup/0.0.5120.1400@0.0.5120.1400" timestamp="1657408295308" />
-    <state x="3488" y="319" width="672" height="678" key="search.everywhere.popup" timestamp="1657424309160">
-      <screen x="0" y="0" width="5120" height="1400" />
-    </state>
-    <state x="3488" y="319" width="672" height="678" key="search.everywhere.popup/0.0.5120.1400@0.0.5120.1400" timestamp="1657424309160" />
+    <MESSAGE value="Worked more on the API (ALMOST FINISHED) also worked on some test impl." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked more on the API (ALMOST FINISHED) also worked on some test impl." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,6 +662,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="collectors.exceptions.CollectorCreationException" package="collectors.exceptions" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

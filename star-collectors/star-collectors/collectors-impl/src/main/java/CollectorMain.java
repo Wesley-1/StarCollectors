@@ -21,10 +21,10 @@ public class CollectorMain extends ExtendedJavaPlugin {
     @Override
     protected void enable() {
         new CollectorsAPI().bind(CollectorMain.class);
-        CollectorEvents.registerEvents();
+        CollectorEvents.registerCollectorInteract();
+        CollectorEvents.registerCollectorPlace();
         CollectorCommand.registerCommmands();
     }
-
 
     @Override
     protected void disable() {

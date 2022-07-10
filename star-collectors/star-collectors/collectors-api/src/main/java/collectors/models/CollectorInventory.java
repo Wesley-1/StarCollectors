@@ -7,6 +7,8 @@ import me.lucko.helper.item.ItemStackBuilder;
 import me.lucko.helper.menu.Item;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
+
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,7 +17,7 @@ import java.util.List;
  *
  * How we will be handling all storing of the collectors inventory.
  */
-public class CollectorInventory {
+public class CollectorInventory implements Serializable {
     private final int size;
     @Getter private final List<ItemStack> itemsToCollect;
     private final int differentItemsAllowed;
@@ -23,8 +25,9 @@ public class CollectorInventory {
     private double totalMoneyAmount;
 
     public CollectorInventory(int size, int differentItemsAllowed, List<ItemStack> items) {
-        if ((items.size() + 1) > differentItemsAllowed)
+        if ((items.size()) > differentItemsAllowed) {
             throw new CollectorCreationException("Error creating collector: Item Types");
+        }
         this.totalMoneyAmount = 0;
         this.differentItemsAllowed = differentItemsAllowed;
         this.itemsToCollect = items;
@@ -37,8 +40,9 @@ public class CollectorInventory {
      * @param items                 These are the items that will be going into the collector.
      */
     public CollectorInventory(int differentItemsAllowed, List<ItemStack> items) {
-        if ((items.size() + 1) > differentItemsAllowed)
+        if ((items.size()) > differentItemsAllowed) {
             throw new CollectorCreationException("Error creating collector: Item Types");
+        }
         this.totalMoneyAmount = 0;
         this.differentItemsAllowed = differentItemsAllowed;
         this.itemsToCollect = items;

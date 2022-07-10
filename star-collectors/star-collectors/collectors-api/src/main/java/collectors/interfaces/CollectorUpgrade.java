@@ -4,6 +4,8 @@ import collectors.models.Instance;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import collectors.records.Collector;
 
+import java.io.Serializable;
+
 public interface CollectorUpgrade {
 
     /**

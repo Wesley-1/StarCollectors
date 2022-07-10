@@ -1,0 +1,4 @@
+main: CollectorMain
+version: 1.0.0
+name: StarCollectors
+api-version: 1.17

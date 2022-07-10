@@ -11,16 +11,16 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.List;
 import java.util.UUID;
 
-public record Collector(UUID name, CollectorType collectorType, CollectorInventory inventory) {
+public record Collector(UUID name, CollectorType collectorType, CollectorInventory inventory, CollectorUpgrade... upgrades) {
 
     /**
      * @param location The location the collector is being registered at.
-     * @param upgrades The upgrades that the collector will have. {@link collectors.interfaces.CollectorUpgrade}
-     * @return This returns a new {@link CollectorUpgrade}
+     * @return This returns a new {@link Instance}
      */
-    public Instance createInstance(Location location, CollectorUpgrade... upgrades) {
+    public Instance createInstance(Location location) {
         return new Instance(this).setLocation(location).registerUpgrades(upgrades);
     }
 
@@ -35,7 +35,7 @@ public record Collector(UUID name, CollectorType collectorType, CollectorInvento
                 .lore("Test", "Test")
                 .breakable(false)
                 .hideAttributes()
-                .transform(is -> CollectorItemData.get(CollectorsAPI.get()).write(is))
+                .transform(is -> CollectorItemData.get(CollectorsAPI.get(), collectorType, List.of(upgrades), inventory).write(is))
                 .build();
     }
 }

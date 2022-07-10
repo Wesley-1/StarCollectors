@@ -4,6 +4,7 @@ import collectors.models.Instance;
 import me.lucko.helper.item.ItemStackBuilder;
 import me.lucko.helper.menu.Gui;
 import me.lucko.helper.menu.scheme.MenuScheme;
+import me.lucko.helper.sql.external.hikari.util.UtilityElf;
 import me.lucko.helper.text3.Text;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -53,7 +54,7 @@ public class CollectorMenu extends Gui {
                             .build());
 
             this.setItem(10, ItemStackBuilder.of(Material.ANVIL).buildItem().bind(ClickType.LEFT, event -> {
-                COLLECTOR_INVENTORY.newPopulator(this).placeIfSpace(ItemStackBuilder.of(Material.PINK_STAINED_GLASS_PANE).buildItem().build());
+                COLLECTOR_INVENTORY.newPopulator(this).placeIfSpace(ItemStackBuilder.of(Material.RED_STAINED_GLASS_PANE).buildItem().build());
                 AtomicInteger slot = new AtomicInteger(10);
 
                 for (ItemStack item : instance.getCollector().inventory().getItemsToCollect()) {

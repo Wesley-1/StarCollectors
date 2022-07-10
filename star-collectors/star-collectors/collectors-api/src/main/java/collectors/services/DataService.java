@@ -15,7 +15,7 @@ public class DataService
 
     public DataService() {}
 
-    public static void load() { Persist.getInstance().loadOrSaveDefault(INSTANCE, DataService.class, "CollectorData"); }
-    public static void save() { Persist.getInstance().save(INSTANCE, "CollectorData"); }
+    public static void load() { Persist.get().loadOrSaveDefault(INSTANCE, DataService.class, "CollectorData"); }
+    public static void save() { Persist.get().save(INSTANCE, "CollectorData"); }
 
 }

@@ -20,6 +20,13 @@ public class Persist {
     private final JavaPlugin api;
     private final Gson gson = this.buildGson().create();
 
+    public static Persist get() {
+        if (Persist.instance == null) {
+            Persist.instance = new Persist();
+        }
+        return Persist.instance;
+    }
+
     public Persist() {
         instance = this;
         this.api = CollectorsAPI.get();

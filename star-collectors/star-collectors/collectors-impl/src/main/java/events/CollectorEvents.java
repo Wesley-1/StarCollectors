@@ -1,14 +1,20 @@
 package events;
 
 import collectors.enums.CollectorType;
+import collectors.items.CollectorItemData;
 import collectors.managers.CollectorManager;
 import collectors.models.CollectorInventory;
 import collectors.models.Instance;
 import collectors.records.Collector;
 import collectors.services.DataService;
+import collectors.utility.CollectorTransformer;
 import me.lucko.helper.Events;
 import menus.CollectorMenu;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -17,40 +23,45 @@ import org.checkerframework.checker.units.qual.C;
 import javax.xml.crypto.Data;
 import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 
 public class CollectorEvents {
 
-    public static void registerEvents() {
+    public static void registerCollectorPlace() {
         Events.subscribe(BlockPlaceEvent.class).handler(event -> {
-            Collector collector = new Collector(event.getPlayer().getUniqueId(), CollectorType.LIMITED_MULTI_ITEM, new CollectorInventory(
-                    12, Arrays.asList(
-                    new ItemStack(Material.ROTTEN_FLESH),
-                    new ItemStack(Material.DIAMOND),
-                    new ItemStack(Material.IRON_INGOT),
-                    new ItemStack(Material.GOLD_BLOCK),
-                    new ItemStack(Material.GOLD_INGOT),
-                    new ItemStack(Material.BONE),
-                    new ItemStack(Material.BONE_BLOCK),
-                    new ItemStack(Material.STONE),
-                    new ItemStack(Material.COBBLESTONE),
-                    new ItemStack(Material.OAK_WOOD),
-                    new ItemStack(Material.OAK_PLANKS),
-                    new ItemStack(Material.SPRUCE_PLANKS),
-                    new ItemStack(Material.SPRUCE_WOOD))));
+            Player player = event.getPlayer();
+            Location location = event.getBlock().getLocation();
+            ItemStack itemInHand = event.getItemInHand();
 
-            Instance instance = collector.createInstance(event.getBlock().getLocation()).setChunk(event.getBlock().getChunk());
+            if (CollectorItemData.readData(itemInHand) == null) return;
+
+            Collector collector = new Collector(
+                    player.getUniqueId(),
+                    CollectorTransformer.getType(itemInHand),
+                    CollectorTransformer.getInventory(itemInHand));
+
+            Instance instance = collector.createInstance(location);
             CollectorManager manager = instance.build();
+
             manager.handleCreate(event);
         });
+    }
 
-        Events.subscribe(PlayerInteractEvent.class).handler(c -> {
-            if (DataService.loadedCollectors == null) return;
-            if (DataService.loadedCollectors.isEmpty()) return;
-            if (!DataService.loadedCollectors.containsKey(c.getClickedBlock().getLocation())) return;
-            Collector collector = DataService.loadedCollectors.get(c.getClickedBlock().getLocation());
-            Instance instance = collector.createInstance(c.getClickedBlock().getLocation());
+    public static void registerCollectorInteract() {
+        Events.subscribe(PlayerInteractEvent.class).handler(event -> {
+            Player player = event.getPlayer();
+            Block block = event.getClickedBlock();
+
+            if (block == null || block.getType() == Material.AIR) return;
+            if (!DataService.loadedCollectors.containsKey(event.getClickedBlock().getLocation())) return;
+
+            Collector collector = DataService.loadedCollectors.get(event.getClickedBlock().getLocation());
+            Instance instance = collector.createInstance(event.getClickedBlock().getLocation());
             CollectorManager manager = instance.build();
-            manager.handleOpen(c, new CollectorMenu(c.getPlayer(), instance));
+
+            manager.handleOpen(event, new CollectorMenu(player, instance));
+
         });
+
     }
 }

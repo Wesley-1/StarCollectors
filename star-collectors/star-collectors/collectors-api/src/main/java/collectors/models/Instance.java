@@ -19,10 +19,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -52,8 +49,10 @@ public class Instance {
         this.collector = collector;
         this.owner = Bukkit.getPlayer(collector.name());
         this.main = CollectorsAPI.get();
+        this.upgrades = new ArrayList<>();
         this.upgradeLevels = new LinkedHashMap<>();
         this.service = CollectorsAPI.getService();
+        this.collectorHologram = Hologram.create(Position.of(bukkitLocation.add(0, 1, 0)), List.of("test"));
     }
 
     /**
@@ -102,10 +101,7 @@ public class Instance {
      * Creates the {@link Hologram} for the collector.
      */
     public void createHologram() {
-        this.collectorHologram =
-                Hologram.create(
-                        Position.of(bukkitLocation.add(0, 1.05, 0)),
-                        List.of("test"));
+        this.collectorHologram.spawn();
 
     }
 
@@ -134,6 +130,7 @@ public class Instance {
      * Builder pattern.
      */
     public Instance registerUpgrades(CollectorUpgrade... upgrades) {
+        if (this.upgrades == null) return this;
         this.upgrades.addAll(Arrays.asList(upgrades));
         this.upgrades.forEach($ -> {
             this.upgradeLevels.put($, 1);

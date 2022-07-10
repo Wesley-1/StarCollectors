@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class CollectorCommand {
@@ -18,24 +19,11 @@ public class CollectorCommand {
         Commands.create()
                 .assertPermission("collector.give").assertPlayer().assertUsage("<player> <amount>").handler(c -> {
 
-            String arg = c.arg(0).parseOrFail(String::describeConstable);
+            String arg = c.arg(0).parseOrFail(String.class);
             if (arg.equalsIgnoreCase("give")) {
                 Player target = c.arg(1).parseOrFail(Player.class);
                 Collector collector = new Collector(target.getUniqueId(), CollectorType.LIMITED_MULTI_ITEM, new CollectorInventory(
-                        12, Arrays.asList(
-                        new ItemStack(Material.ROTTEN_FLESH),
-                        new ItemStack(Material.DIAMOND),
-                        new ItemStack(Material.IRON_INGOT),
-                        new ItemStack(Material.GOLD_BLOCK),
-                        new ItemStack(Material.GOLD_INGOT),
-                        new ItemStack(Material.BONE),
-                        new ItemStack(Material.BONE_BLOCK),
-                        new ItemStack(Material.STONE),
-                        new ItemStack(Material.COBBLESTONE),
-                        new ItemStack(Material.OAK_WOOD),
-                        new ItemStack(Material.OAK_PLANKS),
-                        new ItemStack(Material.SPRUCE_PLANKS),
-                        new ItemStack(Material.SPRUCE_WOOD))));
+                        1, List.of(new ItemStack(Material.STONE))));
 
                 target.getInventory().addItem(collector.createItem());
             }
