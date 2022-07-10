@@ -7,11 +7,11 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
         </processorPath>
-        <module name="star-collectors.StarCollectors.collectors-api.main~1" />
-        <module name="star-collectors.StarCollectors.collectors-impl.main~1" />
+        <module name="StarCollectors.collectors-impl.main" />
+        <module name="StarCollectors.collectors-api.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="16">
+    <bytecodeTargetLevel target="17">
       <module name="mines-api" target="1.8" />
     </bytecodeTargetLevel>
   </component>

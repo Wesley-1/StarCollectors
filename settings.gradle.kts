@@ -8,8 +8,10 @@ setupModule(
 
 fun setupModule(base: String, setup: List<Pair<String, List<String>>>) =
     setup.forEach { pair
-        -> pair.second.forEach { name
-            -> setupSubproject(name, file("$base/${pair.first}/$name"))
+        ->
+        pair.second.forEach { name
+            ->
+            setupSubproject(name, file("$base/${pair.first}/$name"))
         }
     }
 

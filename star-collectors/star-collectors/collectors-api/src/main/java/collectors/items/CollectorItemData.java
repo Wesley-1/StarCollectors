@@ -1,4 +1,5 @@
-import lombok.Getter;
+package collectors.items;
+
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -23,6 +24,6 @@ public class CollectorItemData extends PersistentItemData {
     }
 
     public CollectorItemData read(ItemStack itemStack) {
-        return read(itemStack, DATA_KEY, CollectorItemData.class);
+        return PersistentItemData.read(itemStack, DATA_KEY, CollectorItemData.class);
     }
 }

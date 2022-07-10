@@ -1,3 +1,5 @@
+package collectors.items;
+
 import com.google.gson.Gson;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;

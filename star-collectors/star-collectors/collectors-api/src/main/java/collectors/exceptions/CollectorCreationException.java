@@ -1,3 +1,5 @@
+package collectors.exceptions;
+
 import javax.annotation.Nonnull;
 
 public class CollectorCreationException extends RuntimeException {
